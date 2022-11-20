@@ -1,0 +1,5 @@
+{
+    "name": "GeekMusclay Maker",
+    "version": "0.0.1",
+    "cmd_file": "./config/cmd.json"
+}

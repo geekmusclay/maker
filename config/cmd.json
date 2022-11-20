@@ -1,0 +1,7 @@
+{
+    "controller": {
+        "src": "./config/res/test.php",
+        "dest": "./result/test",
+        "ext": "php"
+    }
+}
