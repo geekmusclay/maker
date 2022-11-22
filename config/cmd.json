@@ -2,6 +2,25 @@
     "controller": {
         "src": "./config/res/test.php",
         "dest": "./result/test",
-        "ext": "php"
+        "file_name": "test.php",
+        "ext": "php",
+        "type": "simple"
+    },
+    "test": {
+        "type": "bulk",
+        "targets": [
+            {
+                "src": "./config/res/controller.php",
+                "dest": "./result/test/Controller",
+                "ext": "php",
+                "file_name": "{name}Controller.php"
+            },
+            {
+                "src": "./config/res/repository.php",
+                "dest": "./result/test/Repository",
+                "ext": "php",
+                "file_name": "{name}Repository.php"
+            }
+        ]
     }
 }
