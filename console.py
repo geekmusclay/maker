@@ -1,3 +1,4 @@
+import os
 import re
 import argparse
 import json
@@ -25,20 +26,24 @@ def manage_simple(config):
         logger.log_fail('No file extension')
         exit()
 
-    # Making directory
-    path = Path(config['dest'])
-    path.mkdir(parents=True)
-
+    # Getting name
     name = args.name
+
+    # Making directory
+    dest = replace(config['dest'], name)
+    if False == os.path.exists(dest):
+        path = Path(dest)
+        path.mkdir(parents=True)
+
     logger.log_success('Treatment for ' + config['src'])
 
     fin = open(config['src'], "rt")
-    fout = open(config['dest'] + "/" + replace(config['file_name'], name) + '.' + config['ext'], "wt")
+    fout = open(dest + "/" + replace(config['file_name'], name) + '.' + config['ext'], "wt")
 
     for line in fin:
         replaced = replace(line, name)
         fout.write(replaced)
-        
+
     fin.close()
     fout.close()
 

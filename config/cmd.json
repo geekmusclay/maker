@@ -13,13 +13,13 @@
                 "src": "./config/res/controller.php",
                 "dest": "./result/test/Controller",
                 "ext": "php",
-                "file_name": "{name}Controller.php"
+                "file_name": "{name}Controller"
             },
             {
                 "src": "./config/res/repository.php",
                 "dest": "./result/test/Repository",
                 "ext": "php",
-                "file_name": "{name}Repository.php"
+                "file_name": "{name}Repository"
             }
         ]
     }
